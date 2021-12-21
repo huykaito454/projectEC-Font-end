@@ -1,0 +1,111 @@
+$color1: #00308f;
+$color2: #1974d2;
+
+$text-color: #000;
+$text-white: white;
+$text-gray: #737373;
+$hover: rgb(23, 103, 182);
+.product {
+  min-width: 128rem;
+  margin-top: 0rem;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: $color1;
+    padding: 4rem 0;
+  }
+  &__group {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: calc((100% / 3) - 2rem);
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.055);
+    margin-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.15s linear;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-5px);
+    }
+    img {
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #00308f11;
+    }
+    &-name {
+      color: $text-color;
+      font-size: 2.2rem;
+      pointer-events: none;
+      margin-bottom: 1.5rem;
+    }
+    &-link {
+      pointer-events: none;
+      color: $color2;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+    &-type {
+      color: $text-gray;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.product {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+  justify-content: space-between;
+}
+.product__catalog {
+  width: 15%;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.068);
+  max-height: 30.3rem;
+}
+.product__catalog-item {
+  list-style: none;
+  padding: 0.5rem 2rem;
+  color: #1974d2;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+  display: flex;
+  justify-content: space-between;
+}
+.product__catalog-item:hover {
+  color: #00308f;
+}
+.product__catalog :last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.title {
+  padding: 0.5rem 2rem;
+  color: white;
+  background-color: #1974d2;
+  border-radius: 0.5rem;
+}
+.product__content {
+  width: calc(85% - 3rem);
+}

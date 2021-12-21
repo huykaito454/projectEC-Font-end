@@ -1,0 +1,56 @@
+$color1: #00308f;
+$color2: #1974d2;
+$color3: #8edfff;
+$color4: #b2ffff;
+$color5: #ededed;
+$text-color: #000;
+$text-white: white;
+$text-gray: #737373;
+$hover: rgb(23, 103, 182);
+.home {
+  padding: 6rem 0;
+  // padding-bottom: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+  &__left {
+    width: 58%;
+  }
+  &__image {
+  }
+  &__right {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    //   font-family: "Poppins", sans-serif;
+    font-size: 5.5rem;
+    font-weight: 550;
+    color: $color1;
+    margin-bottom: 1.5rem;
+  }
+  &__decs {
+    color: $text-color;
+    margin-bottom: 4rem;
+    width: 100%;
+    font-size: 2.2rem;
+  }
+  &__btn {
+    width: 13rem;
+    padding: 1.2rem 4.2rem;
+    background-color: $color2;
+    color: $text-white;
+    border-radius: 0.5rem;
+    text-align: center;
+    // border: 2px solid $color2;
+    box-shadow: 0 0 10px 0 #ededed;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background-color: #1b67b4;
+    }
+  }
+}

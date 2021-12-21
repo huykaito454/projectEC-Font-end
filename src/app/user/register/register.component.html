@@ -1,0 +1,51 @@
+<div class="login">
+    <div class="login__left">
+        <form #RegisterForm="ngForm" class="login__form signup__form " (ngSubmit)="OnSubmit()" >
+            <h3 class="login__title signup-title ">Sign up</h3>
+            <div class="login__form-group">
+                <div class="login__form-item  signup">
+                    <label for="fullname">Full Name :</label>
+                    <input type="text" id="fullname" [(ngModel)]="fullName" name="name"  required>
+                </div>
+                <div class="login__form-item  signup">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" [(ngModel)]="email" name="email" required>
+                </div>
+                <div class="login__form-item  signup">
+                    <label for="username">Phone Number :</label>
+                    <input type="text" id="username" [(ngModel)]="phone" name="username" required>
+                </div>
+                <div class="login__form-item  signup">
+                    <label for="password">Password :</label>
+                    <input type="password" id="password" [(ngModel)]="password" name="password" required>
+                </div>
+                <div class="login__form-item  signup">
+                    <label for="confirm-password">Confirm password :</label>
+                    <input type="password" id="confirm-password password" [(ngModel)]="passwordConfirm" name="passwordConfirm" required>
+                </div>
+                <div class="login__form-check signup-check">
+                    <input type="checkbox" name="" id="checkbox" required>
+                    <label for="checkbox">I've read and agree with Terms of Service
+                    </label>
+                </div>
+                <div *ngIf="check == 1" class="login__form-btn signup-btn" >
+                    <button [disabled]="!RegisterForm.valid" type="submit"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div *ngIf="check == 2" class="login__form-btn signup-btn" >
+                    <button [disabled]="!RegisterForm.valid" type="button"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+            </div>
+            <div class="login__form-already">
+                <p>Already have an account ? </p>
+                <a [routerLink]="['/login']" routerLinkActive="router-link-active" style="margin-left: 1rem;"  >Sign In</a>
+            </div>
+        </form>
+    </div>
+    <div class="login__right">
+        <div class="login__img">
+            <img  src="./../../assets/image/12.png" alt="">
+        
+        </div>
+    </div>
+</div>
